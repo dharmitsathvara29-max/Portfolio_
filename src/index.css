@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+body{
+  /* Full black theme */
+  background: #000000;
+  color: #e6eef8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* No theme-light overrides — site uses single black theme */
+html{
+  scroll-behavior: smooth;
+}
+/* PARTICLES */
+
+.particle {
+
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: rgba(164, 202, 255, 0.18); /* soft cyan-ish */
+  box-shadow: 0 0 10px rgba(164, 202, 255, 0.12);
+  border-radius: 50%;
+  animation: floatParticle 14s linear infinite;
+
+}
+
+.particle1 {
+  top: 10%;
+  left: 20%;
+}
+
+.particle2 {
+  top: 30%;
+  left: 70%;
+  animation-duration: 18s;
+}
+
+.particle3 {
+  top: 60%;
+  left: 40%;
+  animation-duration: 20s;
+}
+
+.particle4 {
+  top: 80%;
+  left: 10%;
+  animation-duration: 22s;
+}
+
+.particle5 {
+  top: 50%;
+  left: 90%;
+  animation-duration: 25s;
+}
+
+.particle6 {
+  top: 15%;
+  left: 50%;
+  animation-duration: 17s;
+}
+
+@keyframes floatParticle {
+
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+
+}
+
+.aura {
+
+  opacity: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(0 6px 18px rgba(92, 119, 255, 0.12));
+
+}
+
+/* REACT */
+.aura1 {
+
+  animation: auraOne 7s infinite;
+  animation-delay: 0s;
+
+}
+
+.aura2 {
+
+  animation: auraTwo 7s infinite;
+  animation-delay: 2s;
+
+}
+
+.aura3 {
+
+  animation: auraThree 7s infinite;
+  animation-delay: 4s;
+
+}
+
+.aura4 {
+
+  animation: auraFour 7s infinite;
+  animation-delay: 1s;
+
+}
+
+.aura5 {
+
+  animation: auraFive 7s infinite;
+  animation-delay: 3s;
+
+}
+
+.aura6 {
+
+  animation: auraSix 7s infinite;
+  animation-delay: 5s;
+
+}
+
+
+/* CURVE ANIMATIONS */
+
+@keyframes auraOne {
+
+  0% {
+    transform: translate(0px, 0px) scale(0.4);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+  transform: translate(-160px, -140px) scale(1);
+  opacity: 0;
+  }
+
+}
+
+@keyframes auraTwo {
+
+  0% {
+    transform: translate(0px, 0px) scale(0.5);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+  transform: translate(150px, -110px) scale(1);
+  opacity: 0;
+  }
+
+}
+
+@keyframes auraThree {
+
+  0% {
+    transform: translate(0px, 0px) scale(0.5);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+  transform: translate(-140px, 150px) scale(1);
+  opacity: 0;
+  }
+
+}
+
+@keyframes auraFour {
+
+  0% {
+    transform: translate(0px, 0px) scale(0.5);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+  transform: translate(170px, 140px) scale(1);
+  opacity: 0;
+  }
+
+}
+
+@keyframes auraFive {
+
+  0% {
+    transform: translate(0px, 0px) scale(0.5);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+  transform: translate(0px, -190px) scale(1);
+  opacity: 0;
+  }
+
+}
+
+@keyframes auraSix {
+
+  0% {
+    transform: translate(0px, 0px) scale(0.5);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+  transform: translate(190px, 0px) scale(1);
+  opacity: 0;
+  }
+
+}
+.dynamic-aura {
+
+  opacity: 0;
+
+  animation-name: dynamicAura;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+
+}
+/* HERO SUBTLE DOTS */
+/* ...existing code... */
+
+@keyframes dynamicAura {
+
+  0% {
+
+    opacity: 0;
+    transform: scale(0.3);
+
+  }
+
+  20% {
+
+    opacity: 1;
+
+  }
+
+  100% {
+
+    opacity: 0;
+    transform: scale(1);
+
+  }
+
+}
